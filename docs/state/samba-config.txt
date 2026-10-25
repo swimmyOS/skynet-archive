@@ -39,17 +39,17 @@
 [Shared]
 	path = /srv/nas/shared
 	read only = No
-	valid users = swimmy
+	valid users = <nas-user>
 
 
 [Backups]
 	browseable = No
 	path = /srv/nas/backups
 	read only = No
-	valid users = swimmy
+	valid users = <nas-user>
 
 
 [Media]
 	path = /srv/nas/media
 	read only = No
-	valid users = swimmy
+	valid users = <nas-user>
