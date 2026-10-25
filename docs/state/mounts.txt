@@ -1,2 +1,2 @@
 TARGET   SOURCE    FSTYPE OPTIONS
-/srv/nas /dev/sda1 ext4   rw,relatime
+/srv/nas /dev/sda1 ext4   rw,noatime

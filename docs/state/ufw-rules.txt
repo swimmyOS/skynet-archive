@@ -1,29 +1,6 @@
-Status: active
-Logging: on (low)
-Default: deny (incoming), allow (outgoing), disabled (routed)
-New profiles: skip
+Status: not installed
 
-To                         Action      From
---                         ------      ----
-22/tcp                     ALLOW IN    Anywhere                  
-53                         ALLOW IN    Anywhere                  
-67                         ALLOW IN    Anywhere                  
-8080                       ALLOW IN    192.168.1.0/24            
-8080                       DENY IN     Anywhere                  
-9090                       ALLOW IN    192.168.1.0/24            
-9090                       DENY IN     Anywhere                  
-137,138/udp (Samba)        ALLOW IN    Anywhere                  
-139,445/tcp (Samba)        ALLOW IN    Anywhere                  
-8096/tcp                   ALLOW IN    Anywhere                  
-5900/tcp                   ALLOW IN    Anywhere                  
-445/tcp                    ALLOW IN    192.168.1.0/24            
-22/tcp (v6)                ALLOW IN    Anywhere (v6)             
-53 (v6)                    ALLOW IN    Anywhere (v6)             
-67 (v6)                    ALLOW IN    Anywhere (v6)             
-8080 (v6)                  DENY IN     Anywhere (v6)             
-9090 (v6)                  DENY IN     Anywhere (v6)             
-137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)             
-139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)             
-8096/tcp (v6)              ALLOW IN    Anywhere (v6)             
-5900/tcp (v6)              ALLOW IN    Anywhere (v6)             
-
+UFW was removed on purpose after the move to the segmented network.
+There is no host firewall. All filtering is done by the network firewall,
+which allows only specific services from the trusted zone to this server
+and blocks the server zone from starting connections to client devices.
